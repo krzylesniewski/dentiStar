@@ -1,3 +1,20 @@
+.mainMenuBackground{
+    background: rgb(21, 189, 156);
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mainMenuBackground h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 28px;
+}
+
 #MainMenu {
     width: 100px;
     height: 50vh;
@@ -5,4 +22,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgb(21, 189, 156);
 }

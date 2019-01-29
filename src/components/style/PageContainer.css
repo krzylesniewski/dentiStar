@@ -1,0 +1,33 @@
+.formWrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100vw - 100px);
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+fieldset{
+    border: none;
+}
+
+#formRow1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#formRow1:first-child,
+#formRow1:last-child{
+    width:50%;
+}
+
+#formRow2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#formRow2:first-child,
+#formRow2:last-child{
+    width:50%;
+}
