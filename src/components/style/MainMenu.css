@@ -1,0 +1,8 @@
+#MainMenu {
+    width: 100px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
