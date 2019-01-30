@@ -8,6 +8,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 
+import axios from 'axios'
+
 class PageContainer extends Component {
   constructor(props) {
     super(props);
@@ -21,17 +23,21 @@ class PageContainer extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-    handleChange = name => event => {
-      this.setState({
-        [name]: event.target.value,
-      });
-    };
-
+  handleChange = name => event => {
+    this.setState({
+      [name]: event.target.value,
+    });
+  };
 
   handleSubmit(event) {
-    // alert('A name was submitted: ' + this.state.value);
     console.log(this.state);
+    axios.post('https://jsonplaceholder.typicode.com/posts', {...this.state})
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
     event.preventDefault();
   }
 
