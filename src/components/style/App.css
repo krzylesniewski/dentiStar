@@ -6,3 +6,6 @@
     justify-content: flex-start;
     align-items: center;
 }
+.container{
+    display: flex;
+}
