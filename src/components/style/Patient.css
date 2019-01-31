@@ -1,0 +1,12 @@
+li{
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+li:nth-of-type(2n){
+    background: #ccc;
+}
+li:nth-of-type(2n+1){
+    background: #eee;
+}
