@@ -34,18 +34,25 @@ class App extends Component {
                 phoneNumber: '3333335825',
                 email: 'testowy3@gmail.com',
             },
+            {
+                id: 4,
+                firstName: 'Krzysztof3',
+                lastName: 'Lesniewski3',
+                phoneNumber: '3333335825',
+                email: 'testowy3@gmail.com',
+            },
         ]
     };
+
     render() {
         return (
             <div className="App">
                 <Router>
-                    <div className="container"  >
-                        <MainMenu />
+                    <div className="container">
+                        <MainMenu/>
                         <Route
                             exact path='/patient/:id'
-                            // component={PatientDetail}
-                            render={()=><Patient data={this.state.users}/>}
+                            render={() => <PatientDetail data={this.state.users}/>}
                         />
                         <Route
                             path='/new-patient'
@@ -55,10 +62,8 @@ class App extends Component {
                             component={Calendar}/>
                         <Route
                             exact path='/patient'
-                            render={()=><Patient data={this.state.users}/>}
-                            // component={Patient}
-                            // data={this.state.users}
-                            />
+                            render={() => <Patient data={this.state.users}/>}
+                        />
                         <Route
                             exact path='/'
                             component={Home}/>

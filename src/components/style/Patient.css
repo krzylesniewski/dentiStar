@@ -1,12 +1,19 @@
-li{
+.patient li{
     width: 700px;
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
-li:nth-of-type(2n){
+.patient li:nth-of-type(2n){
     background: #ccc;
 }
-li:nth-of-type(2n+1){
+.patient li:nth-of-type(2n+1){
     background: #eee;
+}
+.patient a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+.patient a span{
+    margin-right: 40px;
 }

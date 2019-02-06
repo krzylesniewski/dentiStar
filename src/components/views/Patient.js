@@ -1,25 +1,22 @@
 import React, {Component} from 'react';
 import '../style/Patient.css';
+import {Link} from "react-router-dom";
 
 class Patient extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-
-        }
-    }
     render() {
         // console.log(this.props.data);
         const renderUser = this.props.data.map((data) =>
             <li key={data.id}>
-                <span>{data.firstName}</span>
-                <span>{data.lastName}</span>
-                <span>{data.phoneNumber}</span>
-                <span>{data.email}</span>
+                <Link to={`/patient/${data.id}`}>
+                    <span>{data.firstName}</span>
+                    <span>{data.lastName}</span>
+                    <span>{data.phoneNumber}</span>
+                    <span>{data.email}</span>
+                </Link>
             </li>
         );
         return (
-            <div>
+            <div className="patient">
                 <ul>
                     <li>
                         <span>imie</span>
